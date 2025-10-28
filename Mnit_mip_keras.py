@@ -33,12 +33,13 @@ model.add(Dense(128,activation='relu'))  #128 neurons
 model.add(Dense(10,'softmax'))
 
 #compile the model
-model.complie(optimizer='adam',Loss='categorical_crossentropy',metrices=['accuracy'])
+model.compile(optimizer='adam',loss='categorical_crossentropy',metrics=['accuracy'])
 
 #train
 model.fit(x_train,y_train,epochs=10,batch_size=64) #64 images
 
-
+# evaluate
+model.evaluate(x_test,y_test)
 
 
 print('##########')
