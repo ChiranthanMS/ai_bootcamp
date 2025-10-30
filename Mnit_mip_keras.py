@@ -11,8 +11,8 @@ print(x_train.dtype)
 print(x_train.shape)
 print(y_test.shape)
 print(x_train[0])
-#plt.imshow(x_train[0])
-#plt.show()
+plt.imshow(x_train[0])
+plt.show()
 print("**************")
 print(f"label is : {y_train[0]}")
 
@@ -46,5 +46,9 @@ print(result.history.keys())
 print(result.history.values())
 print(result.history)
 
+#visualization 
+plt.plot(result.history['accuracy'],label="train accuracy",color="blue")
+plt.plot(result.history['loss'],label="train loss",color="red")
+plt.show()
 
 print('##########')
